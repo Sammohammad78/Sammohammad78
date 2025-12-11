@@ -31,6 +31,42 @@ Fifteen years in construction. Background in façade engineering.
 
 ---
 
+## Tech Stack
+
+<div align="center">
+
+</div>
+
+<br/>
+
+<div align="center">
+
+### BIM & Coordination
+
+![Revit](https://img.shields.io/badge/Revit-2024%20%2F%202025-0696D7?style=for-the-badge&logo=autodesk&logoColor=white)
+![Dynamo](https://img.shields.io/badge/Dynamo-2.19+%20%7C%204.0-F7B500?style=for-the-badge)
+![ACC](https://img.shields.io/badge/Autodesk_Construction_Cloud-0696D7?style=for-the-badge&logo=autodesk&logoColor=white)
+![BIM 360](https://img.shields.io/badge/BIM_360-FF6D00?style=for-the-badge&logo=autodesk&logoColor=white)
+![Solibri](https://img.shields.io/badge/Solibri-00A651?style=for-the-badge)
+
+### Development
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![pyRevit](https://img.shields.io/badge/pyRevit-3776AB?style=flat-square&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+
+### Platforms & Data
+
+![APS](https://img.shields.io/badge/Autodesk_Platform_Services-FF6C37?style=flat-square&logo=autodesk&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
+![n8n](https://img.shields.io/badge/n8n-EA4B73?style=flat-square&logo=n8n&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+
+</div>
+
+---
+
 ## What I Build
 
 <table>
@@ -83,42 +119,6 @@ Structured exports for downstream systems:
 </td>
 </tr>
 </table>
-
----
-
-## Tech Stack
-
-<div align="center">
-
-</div>
-
-<br/>
-
-<div align="center">
-
-### BIM & Coordination
-
-![Revit](https://img.shields.io/badge/Revit-2024%20%2F%202025-0696D7?style=for-the-badge&logo=autodesk&logoColor=white)
-![Dynamo](https://img.shields.io/badge/Dynamo-2.19+%20%7C%204.0-F7B500?style=for-the-badge)
-![ACC](https://img.shields.io/badge/Autodesk_Construction_Cloud-0696D7?style=for-the-badge&logo=autodesk&logoColor=white)
-![BIM 360](https://img.shields.io/badge/BIM_360-FF6D00?style=for-the-badge&logo=autodesk&logoColor=white)
-![Solibri](https://img.shields.io/badge/Solibri-00A651?style=for-the-badge)
-
-### Development
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![pyRevit](https://img.shields.io/badge/pyRevit-3776AB?style=flat-square&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-
-### Platforms & Data
-
-![APS](https://img.shields.io/badge/Autodesk_Platform_Services-FF6C37?style=flat-square&logo=autodesk&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
-![n8n](https://img.shields.io/badge/n8n-EA4B73?style=flat-square&logo=n8n&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-
-</div>
 
 ---
 
