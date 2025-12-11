@@ -2,7 +2,7 @@
 <svg width="1200" height="260" viewBox="0 0 1200 260"
      xmlns="http://www.w3.org/2000/svg">
 
-  <!-- ===== Background ===== -->
+  <!-- ===== Background & gradients ===== -->
   <defs>
     <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#050816"/>
@@ -14,13 +14,9 @@
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="100%" stop-color="#020617"/>
     </linearGradient>
-
-    <linearGradient id="pipeline-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#22c55e" stop-opacity="0.9"/>
-    </linearGradient>
   </defs>
 
+  <!-- Background -->
   <rect x="0" y="0" width="1200" height="260" fill="url(#bg-grad)"/>
 
   <!-- Subtle grid -->
@@ -29,104 +25,158 @@
     <path d="M80 40 V220 M240 40 V220 M400 40 V220 M560 40 V220 M720 40 V220 M880 40 V220 M1040 40 V220"/>
   </g>
 
-  <!-- ===== LEFT: SIMPLE PREFAB BLOCK (ISOMETRIC) ===== -->
+  <!-- ================================================= -->
+  <!-- LEFT: PREFAB REVIT MODEL (simple isometric block) -->
+  <!-- ================================================= -->
   <g transform="translate(170,145)">
+
     <!-- Shadow -->
-    <polygon points="-70,40 40,40 80,20 -30,20"
+    <polygon points="-60,35 30,35 70,20 -20,20"
              fill="#020617" opacity="0.9"/>
 
-    <!-- Front slab -->
-    <polygon points="-70,20 40,20 80,0 -30,0"
+    <!-- Top (roof) -->
+    <!-- Top face: solid, flat roof -->
+    <polygon points="-50,-15 10,-15 30,-25 -30,-25"
+             fill="#111827" stroke="#1f2937" stroke-width="1.2"/>
+
+    <!-- Front face -->
+    <polygon points="-60,35 30,35 10,-15 -50,-15"
              fill="url(#box-grad)" stroke="#1f2937" stroke-width="1.2"/>
-    <!-- Left wall -->
-    <polygon points="-70,20 -30,0 -30,-40 -70,-20"
-             fill="#020617" stroke="#1f2937" stroke-width="1.2"/>
-    <!-- Right wall -->
-    <polygon points="40,20 80,0 80,-40 40,-20"
+
+    <!-- Side face -->
+    <polygon points="30,35 70,20 30,-25 10,-15"
              fill="#020617" stroke="#1f2937" stroke-width="1.2"/>
 
-    <!-- Simple window grid on front -->
+    <!-- Simple façade (front) - window / grid -->
     <g stroke="#1e293b" stroke-width="0.8">
-      <line x1="-60" y1="8" x2="-30" y2="-5"/>
-      <line x1="-50" y1="12" x2="-20" y2="-1"/>
-      <line x1="-40" y1="16" x2="-10" y2="3"/>
+      <!-- verticals -->
+      <line x1="-50" y1="10" x2="-30" y2="-5"/>
+      <line x1="-40" y1="14" x2="-20" y2="-1"/>
+      <line x1="-30" y1="18" x2="-10" y2="3"/>
+      <line x1="-20" y1="22" x2="0"   y2="7"/>
+      <!-- horizontals -->
+      <line x1="-50" y1="10" x2="-20" y2="22"/>
+      <line x1="-50" y1="4"  x2="-20" y2="16"/>
+      <line x1="-50" y1="-2" x2="-20" y2="10"/>
+    </g>
 
-      <line x1="-60" y1="8" x2="-40" y2="16"/>
-      <line x1="-55" y1="6" x2="-35" y2="14"/>
-      <line x1="-50" y1="4" x2="-30" y2="12"/>
+    <!-- Small door / opening hint -->
+    <g>
+      <polygon points="-10,35 5,35 0,15 -15,15"
+               fill="#020617" stroke="#1e293b" stroke-width="0.9"/>
     </g>
 
     <!-- Label -->
     <g transform="translate(-80,-70)"
        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
        font-size="11" fill="#e5e7eb">
-      <rect x="-5" y="-16" width="160" height="24" rx="6" ry="6"
+      <rect x="-5" y="-16" width="170" height="24" rx="6" ry="6"
             fill="#020617" stroke="#38bdf8" stroke-width="1"/>
       <text x="5" y="1">Revit prefab housing model</text>
     </g>
   </g>
 
-  <!-- ===== RIGHT: PIPELINE ===== -->
+  <!-- ============================================== -->
+  <!-- RIGHT: WORKFLOW PIPELINE WITH BLINKING BLOCKS -->
+  <!-- ============================================== -->
 
-  <!-- Pipeline caption -->
+  <!-- Pipeline title -->
   <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
      font-size="12" fill="#e5e7eb">
-    <text x="430" y="60">Automation pipeline</text>
-    <text x="430" y="78" fill="#9ca3af">Revit → Dynamo → Python → Prefab logic → 5D / CPQ</text>
+    <text x="430" y="55">Automation workflow</text>
+    <text x="430" y="73" fill="#9ca3af">
+      Revit → Dynamo → Python → Prefab logic / 5D
+    </text>
   </g>
 
-  <!-- Pipeline boxes -->
+  <!-- Blocks + arrows -->
   <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
      font-size="11" fill="#e5e7eb" stroke-linecap="round">
 
-    <!-- 1. Revit model -->
+    <!-- 1. Revit model block -->
     <g transform="translate(430,110)">
-      <rect x="0" y="0" width="130" height="40" rx="10" ry="10"
-            fill="#020617" stroke="#38bdf8" stroke-width="1.2"/>
-      <text x="15" y="17">Revit model</text>
-      <text x="15" y="29" fill="#9ca3af">walls, floors, façades</text>
+      <rect id="block-revit"
+            x="0" y="0" width="140" height="42" rx="10" ry="10"
+            fill="#020617" stroke="#38bdf8" stroke-width="1.4" opacity="1">
+        <!-- Blink first in sequence -->
+        <animate attributeName="opacity"
+                 values="1;1;0.35;1"
+                 keyTimes="0;0.2;0.4;1"
+                 dur="4s"
+                 repeatCount="indefinite"
+                 begin="0s" />
+      </rect>
+      <text x="15" y="18">Revit model</text>
+      <text x="15" y="31" fill="#9ca3af">walls, floors, façades</text>
     </g>
 
-    <!-- Arrow -->
-    <g transform="translate(570,130)" stroke="#38bdf8" stroke-width="2">
+    <!-- Arrow 1 -->
+    <g transform="translate(580,131)" stroke="#38bdf8" stroke-width="2">
       <line x1="0" y1="0" x2="30" y2="0"/>
       <polygon points="30,0 22,-5 22,5" fill="#38bdf8"/>
     </g>
 
-    <!-- 2. Dynamo graphs -->
-    <g transform="translate(610,110)">
-      <rect x="0" y="0" width="140" height="40" rx="10" ry="10"
-            fill="#020617" stroke="#facc15" stroke-width="1.2"/>
-      <text x="15" y="17">Dynamo graphs</text>
-      <text x="15" y="29" fill="#9ca3af">joins, sections, dims</text>
+    <!-- 2. Dynamo graphs block -->
+    <g transform="translate(620,110)">
+      <rect id="block-dynamo"
+            x="0" y="0" width="150" height="42" rx="10" ry="10"
+            fill="#020617" stroke="#facc15" stroke-width="1.4" opacity="0.9">
+        <!-- Blink second -->
+        <animate attributeName="opacity"
+                 values="0.5;1;0.5;0.5"
+                 keyTimes="0;0.2;0.4;1"
+                 dur="4s"
+                 repeatCount="indefinite"
+                 begin="0.6s" />
+      </rect>
+      <text x="15" y="18">Dynamo graphs</text>
+      <text x="15" y="31" fill="#9ca3af">joins, sections, dimensions</text>
     </g>
 
-    <!-- Arrow -->
-    <g transform="translate(760,130)" stroke="#facc15" stroke-width="2">
+    <!-- Arrow 2 -->
+    <g transform="translate(780,131)" stroke="#facc15" stroke-width="2">
       <line x1="0" y1="0" x2="30" y2="0"/>
       <polygon points="30,0 22,-5 22,5" fill="#facc15"/>
     </g>
 
-    <!-- 3. Python rules -->
-    <g transform="translate(800,110)">
-      <rect x="0" y="0" width="135" height="40" rx="10" ry="10"
-            fill="#020617" stroke="#38bdf8" stroke-width="1.2"/>
-      <text x="15" y="17">Python rules</text>
-      <text x="15" y="29" fill="#9ca3af">filters, checks, logic</text>
+    <!-- 3. Python rules block -->
+    <g transform="translate(820,110)">
+      <rect id="block-python"
+            x="0" y="0" width="150" height="42" rx="10" ry="10"
+            fill="#020617" stroke="#38bdf8" stroke-width="1.4" opacity="0.9">
+        <!-- Blink third -->
+        <animate attributeName="opacity"
+                 values="0.5;1;0.5;0.5"
+                 keyTimes="0;0.2;0.4;1"
+                 dur="4s"
+                 repeatCount="indefinite"
+                 begin="1.2s" />
+      </rect>
+      <text x="15" y="18">Python rules</text>
+      <text x="15" y="31" fill="#9ca3af">filters, checks, logic</text>
     </g>
 
-    <!-- Arrow -->
-    <g transform="translate(945,130)" stroke="#22c55e" stroke-width="2">
+    <!-- Arrow 3 -->
+    <g transform="translate(980,131)" stroke="#22c55e" stroke-width="2">
       <line x1="0" y1="0" x2="30" y2="0"/>
       <polygon points="30,0 22,-5 22,5" fill="#22c55e"/>
     </g>
 
-    <!-- 4. Prefab logic -->
-    <g transform="translate(985,110)">
-      <rect x="0" y="0" width="150" height="40" rx="10" ry="10"
-            fill="#020617" stroke="#22c55e" stroke-width="1.2"/>
-      <text x="15" y="17">Prefab logic / 5D</text>
-      <text x="15" y="29" fill="#9ca3af">variants, cost, planning</text>
+    <!-- 4. Prefab / 5D block -->
+    <g transform="translate(1020,110)">
+      <rect id="block-5d"
+            x="0" y="0" width="150" height="42" rx="10" ry="10"
+            fill="#020617" stroke="#22c55e" stroke-width="1.4" opacity="0.9">
+        <!-- Blink last -->
+        <animate attributeName="opacity"
+                 values="0.5;1;0.5;0.5"
+                 keyTimes="0;0.2;0.4;1"
+                 dur="4s"
+                 repeatCount="indefinite"
+                 begin="1.8s" />
+      </rect>
+      <text x="15" y="18">Prefab logic / 5D</text>
+      <text x="15" y="31" fill="#9ca3af">variants, cost, planning</text>
     </g>
   </g>
 
@@ -134,7 +184,7 @@
   <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
      font-size="11" fill="#9ca3af" opacity="0.9">
     <text x="60" y="230">
-      Revit prefab model on the left. On the right: the pipeline you actually use — Revit model → Dynamo automation → Python rules → prefab logic with 5D awareness.
+      Left: simple prefab Revit unit. Right: actual workflow — Revit model → Dynamo automation → Python rules → prefab/5D outputs, highlighted in sequence.
     </text>
   </g>
 
