@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 120">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+
+    <filter id="glow3" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="120" fill="url(#bg3)"/>
+
+  <!-- Revit -->
+  <g transform="translate(50, 20)">
+    <rect x="0" y="0" width="80" height="80" rx="12" fill="#1a1f24" stroke="#0696D7" stroke-width="2">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="40" y="45" text-anchor="middle" fill="#0696D7" font-family="Arial Black, sans-serif" font-size="24" font-weight="900">R</text>
+    <text x="40" y="68" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono, monospace" font-size="9">Revit</text>
+  </g>
+
+  <!-- Dynamo -->
+  <g transform="translate(150, 20)">
+    <rect x="0" y="0" width="80" height="80" rx="12" fill="#1a1f24" stroke="#F7B500" stroke-width="2">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" begin="0.3s"/>
+    </rect>
+    <circle cx="30" cy="38" r="10" fill="none" stroke="#F7B500" stroke-width="2"/>
+    <circle cx="50" cy="38" r="10" fill="none" stroke="#F7B500" stroke-width="2"/>
+    <line x1="40" y1="38" x2="40" y2="38" stroke="#F7B500" stroke-width="2"/>
+    <text x="40" y="68" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono, monospace" font-size="9">Dynamo</text>
+  </g>
+
+  <!-- Python -->
+  <g transform="translate(250, 20)">
+    <rect x="0" y="0" width="80" height="80" rx="12" fill="#1a1f24" stroke="#3776AB" stroke-width="2">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" begin="0.6s"/>
+    </rect>
+    <text x="40" y="48" text-anchor="middle" fill="#3776AB" font-size="28">🐍</text>
+    <text x="40" y="68" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono, monospace" font-size="9">Python</text>
+  </g>
+
+  <!-- Solibri -->
+  <g transform="translate(350, 20)">
+    <rect x="0" y="0" width="80" height="80" rx="12" fill="#1a1f24" stroke="#00A651" stroke-width="2">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" begin="0.9s"/>
+    </rect>
+    <text x="40" y="45" text-anchor="middle" fill="#00A651" font-family="Arial Black, sans-serif" font-size="20" font-weight="900">S</text>
+    <text x="40" y="68" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono, monospace" font-size="9">Solibri</text>
+  </g>
+
+  <!-- ACC -->
+  <g transform="translate(450, 20)">
+    <rect x="0" y="0" width="80" height="80" rx="12" fill="#1a1f24" stroke="#FF6D00" stroke-width="2">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" begin="1.2s"/>
+    </rect>
+    <text x="40" y="45" text-anchor="middle" fill="#FF6D00" font-family="Arial, sans-serif" font-size="16" font-weight="bold">ACC</text>
+    <text x="40" y="68" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono, monospace" font-size="9">Cloud</text>
+  </g>
+
+  <!-- Power BI -->
+  <g transform="translate(550, 20)">
+    <rect x="0" y="0" width="80" height="80" rx="12" fill="#1a1f24" stroke="#F2C811" stroke-width="2">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+    </rect>
+    <!-- Bar chart icon -->
+    <rect x="22" y="42" width="10" height="16" fill="#F2C811"/>
+    <rect x="35" y="32" width="10" height="26" fill="#F2C811"/>
+    <rect x="48" y="22" width="10" height="36" fill="#F2C811"/>
+    <text x="40" y="68" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono, monospace" font-size="9">Power BI</text>
+  </g>
+
+  <!-- APS/Forge -->
+  <g transform="translate(650, 20)">
+    <rect x="0" y="0" width="80" height="80" rx="12" fill="#1a1f24" stroke="#FF6C37" stroke-width="2">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" begin="1.8s"/>
+    </rect>
+    <text x="40" y="45" text-anchor="middle" fill="#FF6C37" font-family="Arial, sans-serif" font-size="14" font-weight="bold">APS</text>
+    <text x="40" y="68" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono, monospace" font-size="9">Platform</text>
+  </g>
+
+  <!-- GitHub -->
+  <g transform="translate(750, 20)">
+    <rect x="0" y="0" width="80" height="80" rx="12" fill="#1a1f24" stroke="#58a6ff" stroke-width="2">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite" begin="2.1s"/>
+    </rect>
+    <!-- GitHub logo simplified -->
+    <circle cx="40" cy="35" r="14" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="34" cy="32" r="2" fill="#ffffff"/>
+    <circle cx="46" cy="32" r="2" fill="#ffffff"/>
+    <path d="M 33 40 Q 40 46 47 40" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+    <text x="40" y="68" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono, monospace" font-size="9">GitHub</text>
+  </g>
+
+  <!-- Animated connecting line at bottom -->
+  <line x1="90" y1="105" x2="810" y2="105" stroke="#21262d" stroke-width="1"/>
+  <line x1="90" y1="105" x2="810" y2="105" stroke="url(#blue2)" stroke-width="2" stroke-dasharray="720" stroke-linecap="round">
+    <animate attributeName="stroke-dashoffset" from="720" to="0" dur="4s" repeatCount="indefinite"/>
+  </line>
+  
+  <linearGradient id="blue2" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" style="stop-color:#0A66C2"/>
+    <stop offset="100%" style="stop-color:#00A0DC"/>
+  </linearGradient>
+</svg>
