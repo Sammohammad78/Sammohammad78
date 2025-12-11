@@ -2,7 +2,7 @@
 
 <img src="./assets/bim-hero.svg" alt="BIM automation hero" width="100%" />
 
-# Sam A. Mohammad
+# Sam
 
 **Product Engineer — Digital Construction & BIM Automation**
 
