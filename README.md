@@ -68,7 +68,7 @@ Fifteen years in construction. Background in façade engineering.
 ---
 
 ## What I Build
-
+<div align="center">
 <table>
 <tr>
 <td width="50%" valign="top">
